@@ -1,0 +1,25 @@
+{
+  "loginForm": {
+    "qrTitle": "Quick Login",
+    "qrDesc": "Scan the QR code with your camera or TBC Mobile app",
+    "formTitle": "Enter Your Credentials",
+    "username": "Username",
+    "password": "Password",
+    "remember": "Remember me",
+    "forgot": "Forgot password?",
+    "login": "Sign In",
+    "register": "Register",
+    "errEmpty": "Please fill in all fields",
+    "errWrong": "Incorrect username or password"
+  },
+  "navbar": {
+    "brand": "Concept",
+    "business": "Business",
+    "links": {
+      "bank": "tbcbank.ge",
+      "terms": "Terms & Conditions",
+      "privacy": "Privacy",
+      "contact": "Contact Us"
+    }
+  }
+}
