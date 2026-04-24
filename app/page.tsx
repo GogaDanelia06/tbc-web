@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import LoginForm from "@/components/navbar/LoginForm";
+import LoginForm from "@/components/login/LoginForm";
 import Navbar from "@/components/navbar/Navbar";
+
 
 type Lang = "ka" | "en";
 
