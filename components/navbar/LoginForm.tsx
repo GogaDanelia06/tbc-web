@@ -6,6 +6,7 @@ import ka from "@/messages/ka.json";
 import LoginQR from "./LoginQR";
 import LoginActions from "./LoginAction";
 import LoginFields from "./LoginFields";
+import { useRouter } from "next/navigation";
 
 export type Lang = "ka" | "en";
 
@@ -20,13 +21,14 @@ export default function LoginForm({ lang }: { lang: Lang }) {
   const [error, setError] = useState("");
   const [loading] = useState(false);
 
-  async function handleSubmit() {}
+async function handleSubmit() {
+
 
   return (
     <div className="flex w-full max-w-3xl flex-col overflow-hidden rounded-[10px] bg-white shadow-[0_4px_32px_rgba(0,0,0,0.12)] md:flex-row">
       <LoginQR t={t} />
 
-      <div className="flex flex-1 flex-col p-5 sm:p-6 md:p-8">
+          <div className="flex flex-1 flex-col p-5 sm:p-6 md:p-8 md:pl-10">
         <LoginFields
           t={t}
           username={username}
@@ -48,4 +50,4 @@ export default function LoginForm({ lang }: { lang: Lang }) {
       </div>
     </div>
   );
-}
+}}
