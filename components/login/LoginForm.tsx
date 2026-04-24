@@ -35,7 +35,7 @@ export default function LoginForm({ lang }: { lang: Lang }) {
   }
 
   return (
-    <div className="flex w-full max-w-[760px] flex-col overflow-hidden rounded-[10px] bg-white shadow-[0_4px_32px_rgba(0,0,0,0.12)] md:flex-row">
+    <div className="flex w-full max-w-3xl flex-col overflow-hidden rounded-[10px] bg-white shadow-[0_4px_32px_rgba(0,0,0,0.12)] md:flex-row">
       <LoginQR t={t} />
 
       <div className="flex flex-1 flex-col p-5 sm:p-6 md:p-8">
