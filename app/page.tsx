@@ -18,7 +18,7 @@ export default function LoginPage() {
              bg-[url('/bg.jpg')] bg-cover bg-center bg-no-repeat"
 >
 
-        <div className="relative z-10 w-full max-w-[760px] px-4 sm:px-6 md:px-0">
+        <div className="relative z-10 w-full max-w-3xl px-4 sm:px-6 md:px-0">
   <LoginForm lang={lang} />
 </div>
       </main>

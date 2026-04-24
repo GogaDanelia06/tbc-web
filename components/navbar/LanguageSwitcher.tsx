@@ -20,7 +20,7 @@ export default function LanguageSwitcher({
     <button
       type="button"
       onClick={() => onLangChange(nextLang)}
-      className={`flex items-center rounded border border-white/35 text-white transition-all hover:bg-white/15 hover:text-white ${
+      className={`flex items-center rounded text-white transition-all hover:bg-white/15 hover:text-white ${
         mobile ? "gap-1 px-2 py-1 text-l" : "gap-1.5 px-2.5 py-1 text-l"
       }`}
     >
