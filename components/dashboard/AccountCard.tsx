@@ -8,9 +8,9 @@ export default function AccountCard() {
   return (
     <section className="grid grid-cols-[260px_1fr] overflow-hidden rounded-2xl bg-white shadow-sm">
       <div className="border-r border-gray-200 p-6">
-        <h3 className="mb-4 text-lg font-bold">ანგარიშები</h3>
-        <p className="text-sm text-gray-400">სულ ხელმისაწვდომი:</p>
-        <p className="text-xl font-bold">835,10 GEL</p>
+        <h3 className="mb-4 text-lg font-bold"></h3>
+        <p className="text-sm text-gray-400"></p>
+        <p className="text-xl font-bold">9000000,10 GEL</p>
       </div>
 
       <div>
