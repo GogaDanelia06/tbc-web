@@ -22,17 +22,40 @@ export default function LoginForm({ lang }: { lang: Lang }) {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  async function handleSubmit() {
-    setError("");
+async function handleSubmit() {
+  setError("");
 
-    if (!username.trim() || !password.trim()) {
-      setError(t.errEmpty);
+  if (!username.trim() || !password.trim()) {
+    setError(t.errEmpty);
+    return;
+  }
+
+  setLoading(true);
+
+  try {
+    const res = await fetch("/api/login", {
+      method: "POST",
+      body: JSON.stringify({ username, password }),
+    });
+
+    if (!res.ok) {
+      setError(t.errWrong);
+      setLoading(false);
       return;
     }
 
-    setLoading(true);
+    const data = await res.json();
+
+    // store user (simple version)
+    localStorage.setItem("user", JSON.stringify(data));
+
     router.push("/dashboard");
+  } catch {
+    setError("Server error");
   }
+
+  setLoading(false);
+}
 
   return (
     <div className="flex w-full max-w-3xl flex-col overflow-hidden rounded-[10px] bg-white shadow-[0_4px_32px_rgba(0,0,0,0.12)] md:flex-row">

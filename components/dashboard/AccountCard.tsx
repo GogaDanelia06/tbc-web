@@ -1,26 +1,67 @@
-const cards = [
-  { name: "ბარათი", type: "TBC CARD", amount: "835,10 GEL" },
-  { name: "ბარათი", type: "STUDENT CARD", amount: "0,00 USD" },
-  { name: "ბარათი", type: "STUDENT CARD", amount: "0,00 USD" },
-];
+type Account = {
+  id: number;
+  name: string;
+  balance: string;
+  currency: string;
+};
 
-export default function AccountCard() {
+type AccountLabels = {
+  title: string;
+  totalAvailable: string;
+  cardLabel: string;
+};
+
+type AccountCardProps = {
+  accounts: Account[];
+  labels: AccountLabels;
+};
+
+const GEL_RATES: Record<string, number> = {
+  GEL: 1,
+  USD: 2.7,
+  EUR: 3.15,
+};
+
+function formatMoney(value: string, currency: string) {
+  return `${Number(value).toFixed(2)} ${currency}`;
+}
+
+function convertToGel(balance: string, currency: string) {
+  const rate = GEL_RATES[currency] ?? 1;
+  return Number(balance) * rate;
+}
+
+export default function AccountCard({ accounts, labels }: AccountCardProps) {
+  const totalGel = accounts.reduce((sum, account) => {
+    return sum + convertToGel(account.balance, account.currency);
+  }, 0);
+
   return (
     <section className="grid grid-cols-[260px_1fr] overflow-hidden rounded-2xl bg-white shadow-sm">
       <div className="border-r border-gray-200 p-6">
-        <h3 className="mb-4 text-lg font-bold"></h3>
-        <p className="text-sm text-gray-400"></p>
-        <p className="text-xl font-bold">9000000,10 GEL</p>
+        <h3 className="mb-4 text-lg font-bold">{labels.title}</h3>
+
+        <p className="text-sm text-gray-400">{labels.totalAvailable}</p>
+
+        <p className="mt-2 text-xl font-bold">
+          {totalGel.toFixed(2)} GEL
+        </p>
       </div>
 
       <div>
-        {cards.map((card) => (
-          <div key={card.type + card.amount} className="flex items-center justify-between border-b border-gray-100 px-6 py-3 last:border-0">
+        {accounts.map((account) => (
+          <div
+            key={account.id}
+            className="flex items-center justify-between border-b border-gray-100 px-6 py-3 last:border-0"
+          >
             <div>
-              <p className="font-bold">{card.name}</p>
-              <p className="text-sm text-gray-500">{card.type}</p>
+              <p className="font-bold">{labels.cardLabel}</p>
+              <p className="text-sm text-gray-500">{account.name}</p>
             </div>
-            <p className="font-bold">{card.amount}</p>
+
+            <p className="font-bold">
+              {formatMoney(account.balance, account.currency)}
+            </p>
           </div>
         ))}
       </div>

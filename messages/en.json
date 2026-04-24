@@ -20,6 +20,13 @@
       "terms": "Terms & Conditions",
       "privacy": "Privacy",
       "contact": "Contact Us"
-    }
+    },
+    "dashboard": {
+    "accounts": {
+    "title": "Accounts",
+    "totalAvailable": "Total available:",
+    "cardLabel": "Card"
+  }
+}
   }
 }

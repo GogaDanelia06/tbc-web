@@ -21,6 +21,21 @@
       "terms": "წესები და პირობები",
       "privacy": "კონფიდენციალურობა",
       "contact": "დაგვიკავშირდი"
-    }
+    },
+    "dashboard": {
+    "accounts": {
+    "title": "ანგარიშები",
+    "totalAvailable": "სულ ხელმისაწვდომი:",
+    "cardLabel": "ბარათი"
+  }
+}
+  },
+"dashboard": {
+  "accounts": {
+    "title": "ანგარიშები",
+    "totalAvailable": "სულ ხელმისაწვდომი:",
+    "cardLabel": "ბარათი"
+  }
+
   }
 }
