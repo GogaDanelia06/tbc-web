@@ -11,7 +11,7 @@ export default function NavbarLogo({ brand }: { brand: string }) {
         className="h-8 w-8 object-contain"
       />
       <span className="h-7 w-px bg-white/40" />
-      <span className="whitespace-nowrap text-2xl font-semibold tracking-wide text-white">
+      <span className="whitespace-nowrap text-3xl font-semibold tracking-wide text-white">
         {brand}
       </span>
     </a>

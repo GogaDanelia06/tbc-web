@@ -22,7 +22,7 @@ export default function Navbar({ lang, onLangChange }: NavbarProps) {
   const t = translations[lang].navbar;
 
   const links = [
-    { label: t.links.bank, href: "https://tbcbank.ge" },
+    { label: t.links.bank, href: "" },
     { label: t.links.terms, href: "#" },
     { label: t.links.privacy, href: "#" },
     { label: t.links.contact, href: "#" },

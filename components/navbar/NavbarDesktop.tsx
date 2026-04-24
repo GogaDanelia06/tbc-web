@@ -22,36 +22,27 @@ export default function NavbarDesktop({
           href={link.href}
           target={link.href.startsWith("http") ? "_blank" : undefined}
           rel="noreferrer"
-          className="whitespace-nowrap text-xl text-white/90 transition-opacity hover:text-white hover:underline"
+          className="whitespace-nowrap text-sm text-white/90 transition-opacity hover:text-white hover:underline font-bold"
         >
           {link.label}
         </a>
       ))}
 
       <div className="flex items-center gap-1">
-        <svg
-          className="mr-1 h-3.5 w-3.5 text-white"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <circle cx="12" cy="12" r="10" />
-          <line x1="2" y1="12" x2="22" y2="12" />
-          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-        </svg>
 
-        <LanguageSwitcher lang={lang} onLangChange={onLangChange} />
+       <LanguageSwitcher
+            lang={lang}
+            onLangChange={onLangChange}
+            showGlobe
+          />
       </div>
 
       <a
         href="#"
-        className="flex items-center gap-1.5 whitespace-nowrap border-b-2 border-white pb-0.5 text-[13px] font-semibold text-white"
+        className="flex items-center gap-1.5 whitespace-nowrap text-base font-semibold text-white"
       >
         <svg
-          className="h-3.5 w-3.5"
+          className="h-4.5 w-4.5"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
