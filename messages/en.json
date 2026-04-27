@@ -47,10 +47,35 @@
       "title": "My Personal Banker",
       "hello": "Hello, I’m ready to help you",
       "name": "Tamuna"
-
     },
     "currency": {
       "title": "Currency Exchange"
+    },
+    "pension": {
+      "title": "Pension savings",
+      "amount": "742.40 GEL",
+      "showMore": "Show more"
+    },
+    "cashflow": {
+      "title": "Cashflow",
+      "thisMonth": "This month",
+      "total": "17 421,33₾",
+      "items": {
+        "transfers": "Transfers",
+        "entertainment": "Entertainment",
+        "restaurant": "Restaurant, café, bar",
+        "other": "Other"
+      }
+    },
+    "finance": {
+      "netWorth": "Current net worth",
+      "liabilities": "Liabilities",
+      "assets": "Assets",
+      "expenses": "Expenses",
+      "incomes": "Incomes",
+      "currentMonth": "Current month",
+      "totalSpending": "Total spending",
+      "showingAll": "Showing all"
     }
   }
 }

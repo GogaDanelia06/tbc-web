@@ -15,7 +15,7 @@ export default function CurrencyCard() {
     <section className="overflow-hidden rounded-2xl bg-white text-[#14171f] shadow-sm dark:bg-[#1e293b] dark:text-white">
       
       <h3 className="border-b border-gray-200 p-5 text-lg font-bold dark:border-[#334155]">
-        {t.dashboard.currency.title}
+        {t.currency.title}
       </h3>
 
       <div className="space-y-4 p-5">

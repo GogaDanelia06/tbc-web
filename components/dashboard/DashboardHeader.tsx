@@ -12,7 +12,9 @@ type User = {
 export default function DashboardHeader() {
   const router = useRouter();
   const [user, setUser] = useState<User>({});
-  const { t } = useLanguage();
+
+  // ✅ IMPORTANT: use root instead of t
+  const { root } = useLanguage();
 
   useEffect(() => {
     const stored = localStorage.getItem("user");
@@ -35,8 +37,9 @@ export default function DashboardHeader() {
           <Image src="/logo.png" alt="Concept" width={34} height={34} />
           <span className="h-8 w-px bg-gray-300 dark:bg-gray-600" />
 
+          {/* ✅ FIXED */}
           <span className="text-2xl font-bold text-gray-500 dark:text-gray-300">
-            {t.navbar.brand}
+            {root.navbar.brand}
           </span>
         </div>
 

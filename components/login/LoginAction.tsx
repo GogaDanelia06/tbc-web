@@ -1,3 +1,7 @@
+"use client";
+
+import { useRouter } from "next/navigation";
+
 type LoginActionsProps = {
   t: {
     remember: string;
@@ -18,9 +22,11 @@ export default function LoginActions({
   loading,
   handleSubmit,
 }: LoginActionsProps) {
+  const router = useRouter();
+
   return (
     <>
-      <div className="mb-5 flex justify-between text-gray-500 text-sm">
+      <div className="mb-5 flex justify-between text-sm text-gray-500">
         <label className="flex gap-2">
           <input
             type="checkbox"
@@ -43,7 +49,11 @@ export default function LoginActions({
         {loading ? "..." : t.login}
       </button>
 
-      <button className="font-bold text-[#1ab3e8] hover:underline">
+      <button
+        type="button"
+        onClick={() => router.push("/register")}
+        className="font-bold text-[#1ab3e8] hover:underline"
+      >
         {t.register}
       </button>
     </>

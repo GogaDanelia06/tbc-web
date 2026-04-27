@@ -1,10 +1,10 @@
-import DashboardHeader from "./DashboardHeader";
-import DashboardNav from "./DashboardNav";
 import PromoCard from "./PromoCard";
 import AccountCard from "./AccountCard";
 import TransactionsCard from "./TransactionsCard";
 import PersonalBanker from "./PersonalBanker";
 import CurrencyCard from "./CurrencyCard";
+import PensionSavingsCard from "./PensionSavingsCard";
+import CashflowCard from "./CashflowCard";
 
 type User = {
   id: number;
@@ -26,10 +26,26 @@ type Transaction = {
   date: string;
 };
 
+type Pension = {
+  amount: string;
+  currency: string;
+};
+
+type CashflowItem = {
+  id: number;
+  label: string;
+  amount: string;
+};
+
 type DashboardData = {
   user: User;
   accounts: Account[];
   transactions: Transaction[];
+  pension: Pension;
+  cashflow: {
+    total: string;
+    items: CashflowItem[];
+  };
 };
 
 type DashboardLabels = {
@@ -50,27 +66,21 @@ export default function DashboardLayout({
   labels,
 }: DashboardLayoutProps) {
   return (
-    <div className="min-h-screen bg-[#f3f4f6] text-[#14171f] dark:bg-black dark:text-white">
-      <DashboardHeader />
-      <DashboardNav />
+    <div className="grid w-full max-w-7xl grid-cols-1 gap-4 sm:gap-6 lg:grid-cols-[1fr_330px]">
+      <section className="space-y-6">
+        <PromoCard />
 
-      <main className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-6 py-8 lg:grid-cols-[1fr_330px]">
-        <section className="space-y-6">
-          <PromoCard />
+        <AccountCard accounts={data.accounts} labels={labels.accounts} />
 
-          <AccountCard
-            accounts={data.accounts}
-            labels={labels.accounts}
-          />
+        <TransactionsCard transactions={data.transactions} />
+      </section>
 
-          <TransactionsCard transactions={data.transactions} />
-        </section>
-
-        <aside className="space-y-6">
-          <PersonalBanker />
-          <CurrencyCard />
-        </aside>
-      </main>
+      <aside className="space-y-6">
+        <PersonalBanker />
+        <CurrencyCard />
+        <PensionSavingsCard pension={data.pension} />
+        <CashflowCard cashflow={data.cashflow} />
+      </aside>
     </div>
   );
 }

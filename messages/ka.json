@@ -50,6 +50,32 @@
     },
     "currency": {
       "title": "ვალუტის კონვერტაცია"
+    },
+    "pension": {
+      "title": "საპენსიო დანაზოგი",
+      "amount": "742.40 GEL",
+      "showMore": "მეტის ნახვა"
+    },
+    "cashflow": {
+      "title": "ხარჯები",
+      "thisMonth": "ამ თვეში",
+      "total": "17 421,33₾",
+      "items": {
+        "transfers": "გადარიცხვები",
+        "entertainment": "გართობა",
+        "restaurant": "რესტორანი, კაფე, ბარი",
+        "other": "სხვა"
+      }
+    },
+    "finance": {
+      "netWorth": "მიმდინარე ქონება",
+      "liabilities": "ვალდებულებები",
+      "assets": "აქტივები",
+      "expenses": "ხარჯები",
+      "incomes": "შემოსავლები",
+      "currentMonth": "მიმდინარე თვე",
+      "totalSpending": "სულ დახარჯული",
+      "showingAll": "ყველას ჩვენება"
     }
   }
 }

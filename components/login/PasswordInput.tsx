@@ -21,6 +21,7 @@ export default function PasswordInput({
   return (
     <div className="relative mb-3 md:mb-4">
       <input
+      type="password"
         placeholder={t.password}
         value={password}
         onChange={(e) => {

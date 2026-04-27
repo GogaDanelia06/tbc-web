@@ -20,7 +20,7 @@ export default function TransactionsCard({
     <section className="overflow-hidden rounded-2xl bg-white text-[#14171f] shadow-sm dark:bg-[#1e293b] dark:text-white">
       
       <h3 className="border-b border-gray-200 p-6 text-lg font-bold dark:border-[#334155]">
-        {t.dashboard.transactions.title}
+        {t.transactions.title}
       </h3>
 
       {transactions.map((tx) => (

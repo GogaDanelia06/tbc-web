@@ -46,7 +46,6 @@ async function handleSubmit() {
 
     const data = await res.json();
 
-    // store user (simple version)
     localStorage.setItem("user", JSON.stringify(data));
 
     router.push("/dashboard");
