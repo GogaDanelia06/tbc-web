@@ -1,3 +1,7 @@
+"use client";
+
+import { useLanguage } from "@/context/LanguageContext";
+
 type Account = {
   id: number;
   name: string;
@@ -31,19 +35,25 @@ function convertToGel(balance: string, currency: string) {
   return Number(balance) * rate;
 }
 
-export default function AccountCard({ accounts, labels }: AccountCardProps) {
+export default function AccountCard({ accounts }: AccountCardProps) {
+  const { t } = useLanguage();
+
   const totalGel = accounts.reduce((sum, account) => {
     return sum + convertToGel(account.balance, account.currency);
   }, 0);
 
   return (
-    <section className="grid grid-cols-[260px_1fr] overflow-hidden rounded-2xl bg-white shadow-sm">
-      <div className="border-r border-gray-200 p-6">
-        <h3 className="mb-4 text-lg font-bold">{labels.title}</h3>
+    <section className="grid grid-cols-[260px_1fr] overflow-hidden rounded-2xl bg-white text-[#14171f] shadow-sm dark:bg-[#1e293b] dark:text-white">
+      <div className="border-r border-gray-200 p-6 dark:border-[#334155]">
+        <h3 className="mb-4 text-lg font-bold text-[#14171f] dark:text-white">
+          {t.dashboard.accounts.title}
+        </h3>
 
-        <p className="text-sm text-gray-400">{labels.totalAvailable}</p>
+        <p className="text-sm text-gray-400 dark:text-gray-400">
+          {t.dashboard.accounts.totalAvailable}
+        </p>
 
-        <p className="mt-2 text-xl font-bold">
+        <p className="mt-2 text-xl font-bold text-[#14171f] dark:text-white">
           {totalGel.toFixed(2)} GEL
         </p>
       </div>
@@ -52,14 +62,19 @@ export default function AccountCard({ accounts, labels }: AccountCardProps) {
         {accounts.map((account) => (
           <div
             key={account.id}
-            className="flex items-center justify-between border-b border-gray-100 px-6 py-3 last:border-0"
+            className="flex items-center justify-between border-b border-gray-100 px-6 py-3 last:border-0 dark:border-[#334155]"
           >
             <div>
-              <p className="font-bold">{labels.cardLabel}</p>
-              <p className="text-sm text-gray-500">{account.name}</p>
+              <p className="font-bold text-[#14171f] dark:text-white">
+                {t.dashboard.accounts.cardLabel}
+              </p>
+
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+                {account.name}
+              </p>
             </div>
 
-            <p className="font-bold">
+            <p className="font-bold text-[#14171f] dark:text-white">
               {formatMoney(account.balance, account.currency)}
             </p>
           </div>

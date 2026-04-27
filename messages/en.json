@@ -20,13 +20,37 @@
       "terms": "Terms & Conditions",
       "privacy": "Privacy",
       "contact": "Contact Us"
+    }
+  },
+  "dashboard": {
+    "nav": {
+      "home": "Home",
+      "products": "My Products",
+      "transfers": "Transfers",
+      "transactions": "Transactions",
+      "finance": "My Finances",
+      "activation": "Product Activation"
     },
-    "dashboard": {
     "accounts": {
-    "title": "Accounts",
-    "totalAvailable": "Total available:",
-    "cardLabel": "Card"
-  }
-}
+      "title": "Accounts",
+      "totalAvailable": "Total available:",
+      "cardLabel": "Card"
+    },
+    "transactions": {
+      "title": "Recent Transactions"
+    },
+    "promo": {
+      "title": "Travel Offers",
+      "desc": "Enjoy TBC Concept travel offers"
+    },
+    "banker": {
+      "title": "My Personal Banker",
+      "hello": "Hello, I’m ready to help you",
+      "name": "Tamuna"
+
+    },
+    "currency": {
+      "title": "Currency Exchange"
+    }
   }
 }

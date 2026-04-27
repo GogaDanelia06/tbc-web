@@ -30,7 +30,7 @@ export default function LoginFields({
 
   return (
     <>
-      <h2 className="mb-4 text-[18px] font-bold text-[#1a1a2e] md:mb-5 md:text-[20px]">
+      <h2 className="mb-4 text-[18px] font-bold text-[#1a1a2e] md:mb-5 md:text-2xl">
         {t.formTitle}
       </h2>
 

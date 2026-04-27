@@ -50,7 +50,7 @@ export default function DashboardLayout({
   labels,
 }: DashboardLayoutProps) {
   return (
-    <div className="min-h-screen bg-[#f3f4f6] text-[#14171f]">
+    <div className="min-h-screen bg-[#f3f4f6] text-[#14171f] dark:bg-black dark:text-white">
       <DashboardHeader />
       <DashboardNav />
 
