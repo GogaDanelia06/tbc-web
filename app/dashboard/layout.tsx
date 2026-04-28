@@ -1,5 +1,5 @@
 import DashboardHeader from "@/components/dashboard/DashboardHeader";
-import DashboardNav from "@/components/dashboard/DashboardNav";
+import DashboardNav from "@/components/dashboard/nav/DashboardNav";
 
 export default function DashboardRootLayout({
   children,

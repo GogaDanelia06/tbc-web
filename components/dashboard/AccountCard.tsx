@@ -54,7 +54,7 @@ export default function AccountCard({ accounts }: AccountCardProps) {
           {t.accounts.totalAvailable}
         </p>
 
-        <p className="mt-2 break-words text-xl font-bold text-[#14171f] dark:text-white">
+        <p className="mt-2 text-xl font-bold text-[#14171f] dark:text-white">
           {totalGel.toFixed(2)} GEL
         </p>
       </div>
