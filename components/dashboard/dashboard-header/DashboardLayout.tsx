@@ -1,10 +1,10 @@
-import PromoCard from "./PromoCard";
-import AccountCard from "./AccountCard";
-import TransactionsCard from "./TransactionsCard";
-import PersonalBanker from "./PersonalBanker";
-import CurrencyCard from "./CurrencyCard";
-import PensionSavingsCard from "./PensionSavingsCard";
-import CashflowCard from "./CashflowCard";
+import PromoCard from "../promocards/PromoCard";
+import AccountCard from "../AccountCard";
+import TransactionsCard from "../Transaction/TransactionsCard";
+import PersonalBanker from "../Banker/PersonalBanker";
+import CurrencyCard from "../CurrencyCard";
+import PensionSavingsCard from "../Pension/PensionSavingsCard";
+import CashflowCard from "../CashflowCard";
 
 type User = {
   id: number;

@@ -31,42 +31,42 @@
       "finance": "My Finances",
       "activation": "Product Activation"
     },
- "profile": {
-    "settings": "Settings",
-    "language": "Eng",
-    "contactTitle": "View and amend your contact details",
-    "contactDesc": "Please allow few minutes for contact details change to take effect",
-    "upload": "Upload picture",
-    "delete": "Delete picture",
-    "visibleNote": "Please take into consideration that your profile picture will be visible to those TBC internet and mobile bank users",
-    "mobile": "Mobile number",
-    "email": "Email address",
-    "address": "Address"
-  },
+    "profile": {
+      "retail": "Retail Internet bank",
+      "contact": "Contact details",
+      "userInfo": "User Information",
+      "loginDetails": "Log in details",
+      "security": "Security level",
+      "accounts": "Accounts",
+      "offers": "Offers Control",
+      "layout": "Internet Banking layout"
+    },
+    "settings": {
+      "settings": "Settings",
+      "language": "Eng",
+      "contactTitle": "View and amend your contact details",
+      "contactDesc": "Please allow few minutes for contact details change to take effect",
+      "upload": "Upload picture",
+      "delete": "Delete picture",
+      "visibleNote": "Please take into consideration that your profile picture will be visible to those TBC internet and mobile bank users",
+      "mobile": "Mobile number",
+      "email": "Email address",
+      "address": "Address"
+    },
     "transferMenu": {
-  "betweenOwn": "Between own accounts",
-  "someoneElse": "Someone else",
-  "mobile": "With mobile number",
-  "treasury": "Treasury",
-  "send": "Send transfer",
-  "receive": "Receive transfer",
-  "history": "Transfer history",
-  "topUp": "Top Up Mobile",
-  "bill": "Pay a Bill",
-  "parking": "Parking and fines",
-  "templates": "Templates",
-  "standing": "Standing order & Direct debit"
-},
-"profile": {
-  "retail": "Retail Internet bank",
-  "contact": "Contact details",
-  "userInfo": "User Information",
-  "loginDetails": "Log in details",
-  "security": "Security level",
-  "accounts": "Accounts",
-  "offers": "Offers Control",
-  "layout": "Internet Banking layout"
-},
+      "betweenOwn": "Between own accounts",
+      "someoneElse": "Someone else",
+      "mobile": "With mobile number",
+      "treasury": "Treasury",
+      "send": "Send transfer",
+      "receive": "Receive transfer",
+      "history": "Transfer history",
+      "topUp": "Top Up Mobile",
+      "bill": "Pay a Bill",
+      "parking": "Parking and fines",
+      "templates": "Templates",
+      "standing": "Standing order & Direct debit"
+    },
     "accounts": {
       "title": "Accounts",
       "totalAvailable": "Total available:",
@@ -114,18 +114,18 @@
       "showingAll": "Showing all"
     },
     "products": {
-  "tabs": {
-    "accounts": "Accounts / Cards",
-    "credit": "Credit cards",
-    "deposits": "Deposits",
-    "loans": "Loans"
-  },
-  "debitCards": "Debit cards",
-  "totalFunds": "Total funds",
-  "accountNumber": "Account number",
-  "balance": "Balance",
-  "available": "Available amount",
-  "empty": "No products in this section yet"
-}
+      "tabs": {
+        "accounts": "Accounts / Cards",
+        "credit": "Credit cards",
+        "deposits": "Deposits",
+        "loans": "Loans"
+      },
+      "debitCards": "Debit cards",
+      "totalFunds": "Total funds",
+      "accountNumber": "Account number",
+      "balance": "Balance",
+      "available": "Available amount",
+      "empty": "No products in this section yet"
+    }
   }
 }

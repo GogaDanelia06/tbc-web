@@ -1,4 +1,4 @@
-import DashboardHeader from "@/components/dashboard/DashboardHeader";
+import DashboardHeader from "@/components/dashboard/dashboard-header/DashboardHeader";
 import DashboardNav from "@/components/dashboard/nav/DashboardNav";
 
 export default function DashboardRootLayout({

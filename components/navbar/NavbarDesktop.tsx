@@ -1,5 +1,4 @@
 import type { Lang } from "./Navbar";
-import LanguageSwitcher from "./LanguageSwitcher";
 
 interface NavbarDesktopProps {
   lang: Lang;
@@ -28,14 +27,6 @@ export default function NavbarDesktop({
         </a>
       ))}
 
-      <div className="flex items-center gap-1">
-
-       <LanguageSwitcher
-            lang={lang}
-            onLangChange={onLangChange}
-            showGlobe
-          />
-      </div>
 
       <a
         href="#"

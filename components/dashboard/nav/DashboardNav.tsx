@@ -1,8 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
+
 import { useLanguage } from "@/context/LanguageContext";
+
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
 import { getNavItems, getTransferMenu } from "./navItems";
@@ -16,13 +18,32 @@ export default function DashboardNav() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [transferOpen, setTransferOpen] = useState(false);
 
+  const navRef = useRef<HTMLDivElement>(null);
+
   const navItems = getNavItems(t);
   const transferMenu = getTransferMenu(t);
 
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        setSettingsOpen(false);
+        setTransferOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   function goTo(href: string) {
     router.push(href);
+
     setMenuOpen(false);
     setTransferOpen(false);
+    setSettingsOpen(false);
   }
 
   function isActive(href: string) {
@@ -30,7 +51,7 @@ export default function DashboardNav() {
   }
 
   return (
-    <>
+    <div ref={navRef}>
       <DesktopNav
         navItems={navItems}
         transferMenu={transferMenu}
@@ -51,6 +72,6 @@ export default function DashboardNav() {
         goTo={goTo}
         isActive={isActive}
       />
-    </>
+    </div>
   );
 }

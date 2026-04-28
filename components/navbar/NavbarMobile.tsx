@@ -1,5 +1,4 @@
 import type { Lang } from "./Navbar";
-import LanguageSwitcher from "./LanguageSwitcher";
 
 interface NavbarMobileProps {
   lang: Lang;
@@ -21,12 +20,6 @@ export default function NavbarMobile({
   return (
     <>
       <div className="flex items-center gap-3 lg:hidden">
-        <LanguageSwitcher
-          lang={lang}
-          onLangChange={onLangChange}
-          mobile
-          showGlobe
-        />
 
         <a
           href="#"
