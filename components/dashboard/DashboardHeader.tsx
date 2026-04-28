@@ -53,7 +53,7 @@ export default function DashboardHeader() {
             </span>
 
             <Image
-              src="/logo.png"
+              src="/.png"
               alt="Profile"
               width={42}
               height={42}
