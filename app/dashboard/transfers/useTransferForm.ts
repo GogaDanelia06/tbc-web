@@ -15,7 +15,10 @@ export function useTransferForm(userId: number, langMessage: LangMessage) {
   const [mobileNumber, setMobileNumber] = useState("");
   const [treasuryCode, setTreasuryCode] = useState("");
   const [amount, setAmount] = useState("");
+
   const [message, setMessage] = useState("");
+  const [messageType, setMessageType] = useState<"success" | "error" | "">("");
+
   const router = useRouter();
 
   useEffect(() => {
@@ -27,14 +30,27 @@ export function useTransferForm(userId: number, langMessage: LangMessage) {
     loadAccounts();
   }, [userId]);
 
+  useEffect(() => {
+    if (!message) return;
+
+    const timer = setTimeout(() => {
+      setMessage("");
+      setMessageType("");
+    }, 4000);
+
+    return () => clearTimeout(timer);
+  }, [message]);
+
   function resetMessage() {
     setMessage("");
+    setMessageType("");
   }
 
   async function handleTransfer() {
     resetMessage();
 
     if (type === "mobile" || type === "treasury") {
+      setMessageType("error");
       setMessage(
         langMessage(
           "This option will be added next.",
@@ -55,6 +71,7 @@ export function useTransferForm(userId: number, langMessage: LangMessage) {
     const data = await res.json();
 
     if (!res.ok) {
+      setMessageType("error");
       setMessage(
         data.error ||
           langMessage("Transfer failed", "გადარიცხვა ვერ შესრულდა")
@@ -62,22 +79,23 @@ export function useTransferForm(userId: number, langMessage: LangMessage) {
       return;
     }
 
-setMessage(
-  langMessage(
-    "Transfer completed successfully",
-    "გადარიცხვა წარმატებით შესრულდა"
-  )
-);
+    setMessageType("success");
+    setMessage(
+      langMessage(
+        "Transfer completed successfully",
+        "გადარიცხვა წარმატებით შესრულდა"
+      )
+    );
 
-const updatedAccounts = await fetchAccounts(userId);
-setAccounts(updatedAccounts);
+    const updatedAccounts = await fetchAccounts(userId);
+    setAccounts(updatedAccounts);
 
-router.refresh();
+    router.refresh();
 
-setAmount("");
-setRecipientUsername("");
-setMobileNumber("");
-setTreasuryCode("");
+    setAmount("");
+    setRecipientUsername("");
+    setMobileNumber("");
+    setTreasuryCode("");
   }
 
   return {
@@ -97,6 +115,7 @@ setTreasuryCode("");
     amount,
     setAmount,
     message,
+    messageType,
     resetMessage,
     handleTransfer,
   };

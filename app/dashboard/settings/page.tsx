@@ -8,10 +8,25 @@ import ContactInfo from "@/app/dashboard/settings/ContactInfo";
 import PersonalInfo from "@/app/dashboard/settings/PersonalInfo";
 import LoginDetails from "@/app/dashboard/settings/LoginDetails";
 import SecuritySettings from "@/app/dashboard/settings/SecuritySettings";
+import { useEffect, useState } from "react";
+import DashboardLoading from "@/components/ui/DashboardLoading";
 
 export default function SettingsPage() {
-  
+  const [loading, setLoading] = useState(true);
   const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <DashboardLoading />;
+  }
+
   const tab = searchParams.get("tab") || "contact";
 
   function renderContent() {

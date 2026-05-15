@@ -1,5 +1,6 @@
 import type { Account, TransferType } from "./types";
 
+
 export async function fetchAccounts(userId: number): Promise<Account[]> {
   const res = await fetch(`/api/template-transfer/accounts?userId=${userId}`);
 
