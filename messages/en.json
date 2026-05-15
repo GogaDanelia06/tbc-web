@@ -1,0 +1,182 @@
+{
+  "loginForm": {
+    "qrTitle": "Quick Login",
+    "qrDesc": "Scan the QR code with your camera or TBC Mobile app",
+    "formTitle": "Enter Your Credentials",
+    "username": "Username",
+    "password": "Password",
+    "remember": "Remember me",
+    "forgot": "Forgot password?",
+    "login": "Sign In",
+    "register": "Register",
+    "errEmpty": "Please fill in all fields",
+    "errWrong": "Incorrect username or password"
+  },
+  "navbar": {
+    "brand": "Concept",
+    "business": "Business",
+    "links": {
+      "bank": "tbcbank.ge",
+      "terms": "Terms & Conditions",
+      "privacy": "Privacy",
+      "contact": "Contact Us"
+    }
+  },
+  "dashboard": {
+    "nav": {
+      "home": "Home",
+      "products": "My Products",
+      "transfers": "Transfers",
+      "transactions": "Transactions",
+      "finance": "My Finances",
+      "activation": "Product Activation"
+    },
+    "transactions": {
+  "title": "Recent Transactions",
+  "seeAll": "See all",
+  "seeAllTransactions": "See all transactions"
+  
+},
+    "profile": {
+      "retail": "Retail Internet bank",
+      "contact": "Contact details",
+      "userInfo": "User Information",
+      "loginDetails": "Log in details",
+      "security": "Security level",
+      "accounts": "Accounts",
+      "offers": "Offers Control",
+      "layout": "Internet Banking layout"
+    },
+    "settings": {
+      "settings": "Settings",
+      "language": "Eng",
+      "contactTitle": "View and amend your contact details",
+      "contactDesc": "Please allow few minutes for contact details change to take effect",
+      "upload": "Upload picture",
+      "delete": "Delete picture",
+      "visibleNote": "Please take into consideration that your profile picture will be visible to those TBC internet and mobile bank users",
+      "mobile": "Mobile number",
+      "email": "Email address",
+      "address": "Address"
+    },
+    "transferMenu": {
+      "betweenOwn": "Between own accounts",
+      "someoneElse": "Someone else",
+      "mobile": "With mobile number",
+      "treasury": "Treasury",
+      "send": "Send transfer",
+      "receive": "Receive transfer",
+      "history": "Transfer history",
+      "topUp": "Top Up Mobile",
+      "bill": "Pay a Bill",
+      "parking": "Parking and fines",
+      "templates": "Templates",
+      "standing": "Standing order & Direct debit"
+    },
+    "accounts": {
+      "title": "Accounts",
+      "totalAvailable": "Total available:",
+      "cardLabel": "Card"
+    },
+"transactionsPage": {
+  "title": "Transactions",
+  "tabs": {
+    "transactions": "Transactions",
+    "statements": "Statements",
+    "futurePayments": "Future payments"
+  },
+  "search": "Search by content",
+  "date": "Date",
+  "category": "Category",
+  "details": "Purpose / details",
+  "account": "Account",
+  "amount": "Amount",
+  "empty": "No transactions found"
+},
+"promo": {
+  "title": "Travel Offers",
+  "desc": "Enjoy TBC Concept travel offers"
+},
+    "banker": {
+      "title": "My Personal Banker",
+      "hello": "Hello, I’m ready to help you",
+      "name": "Tamuna"
+    },
+    "currency": {
+      "title": "Currency Exchange"
+    },
+    "pension": {
+      "title": "Pension savings",
+      "amount": "742.40 GEL",
+      "showMore": "Show more"
+    },
+    "cashflow": {
+      "title": "Cashflow",
+      "thisMonth": "This month",
+      "total": "17 421,33₾",
+      "items": {
+        "transfers": "Transfers",
+        "entertainment": "Entertainment",
+        "restaurant": "Restaurant, café, bar",
+        "other": "Other"
+      }
+    },
+"finance": {
+  "netWorth": "Current net worth",
+  "liabilities": "Liabilities",
+  "assets": "Assets",
+  "expenses": "Expenses",
+  "incomes": "Incomes",
+  "currentMonth": "Current month",
+  "totalSpending": "Total spending",
+  "showingAll": "Showing all",
+  "search": "Search",
+  "filter": "Filter",
+  "range": "Range",
+  "from": "From",
+  "to": "To",
+  "searchPlaceholder": "Search transactions...",
+  "transactions": "Transactions",
+"transactionCount": "transaction",
+"transactionsCount": "transactions",
+"expense": "Expense",
+"noTransactions": "No transactions for this period",
+"changeDateOrSearch": "Try changing the date range or search keyword.",
+  "filters": {
+    "month": "Month",
+    "day": "Day"
+  }
+    },
+    "products": {
+      "tabs": {
+        "accounts": "Accounts / Cards",
+        "credit": "Credit cards",
+        "deposits": "Deposits",
+        "loans": "Loans"
+      },
+      "debitCards": "Debit cards",
+      "totalFunds": "Total funds",
+      "accountNumber": "Account number",
+      "balance": "Balance",
+      "available": "Available amount",
+      "empty": "No products in this section yet"
+    },
+    "financeSummary": {
+  "income": "Income",
+  "expenses": "Expenses",
+  "netChange": "Net change",
+  "moneyReceived": "Money received",
+  "moneySpent": "Money spent",
+  "incomeMinusExpenses": "Income minus expenses"
+},
+"financeChart": {
+  "spendingByCategory": "Spending by category",
+  "clear": "Clear",
+  "noSpendingData": "No spending data"
+},
+"settingsMenu": {
+  "settings": "Settings",
+  "logout": "Logout"
+}
+  }
+}
